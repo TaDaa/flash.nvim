@@ -306,7 +306,7 @@ function M.create_float(extmark, next_floats)
       relative = 'win',
       win = extmark.win,
       row = 1,
-      bufpos = {extmark.row, extmark.col+1},
+      bufpos = {extmark.row, extmark.col},
     })
   end
   return changed
