@@ -247,6 +247,8 @@ function M:hide()
   if self.visible then
     self.visible = false
     Highlight.clear(self.ns)
+    vim.schedule(Highlight.clear_floats)
+    
   end
 end
 

@@ -106,7 +106,6 @@ function M:_update_wins()
     self.state.wins = vim.tbl_filter(function(w)
       local buf = vim.api.nvim_win_get_buf(w)
       local ft = vim.bo[buf].filetype
-
       for _, exclude in ipairs(self.state.opts.search.exclude) do
         if type(exclude) == "string" and exclude == ft then
           return false
